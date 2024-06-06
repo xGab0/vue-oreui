@@ -1,0 +1,155 @@
+@import './shared.css';
+
+.active-button-container {
+  background: none;
+}
+
+.active-button-container:hover {
+  cursor: pointer;
+}
+
+.active-button-container:hover .active-button-upper {
+  border-color: rgb(156, 155, 155);
+  border-style: solid;
+  border-width: 3px 3px 0px 3px;
+
+  transition: 0.2s
+}
+
+.active-button-container:hover .active-button-height {
+  border-color: rgb(156, 155, 155);
+  border-style: solid;
+  border-width: 0px 3px 3px 3px;
+
+  transition: 0.2s
+}
+
+.active-button-container:active .upper-hitbox {
+  height: 14px;
+
+  transition: 0.2s
+}
+
+.active-button-container:active .active-button-upper {
+  box-shadow: inset 0px 0px 0px 3px #72ca54;
+
+  border-color: rgb(196, 196, 196);
+  border-style: solid;
+  border-width: 3px 3px 0px 3px;
+
+
+  transition: 0.2s
+}
+
+.active-button-container:active .active-button-height {
+  height: 0px;
+
+  border-color: rgb(196, 196, 196);
+  border-style: solid;
+  border-width: 0px 3px 3px 3px;
+
+  transition: 0.2s
+}
+
+
+.active-button-container:focus {
+
+}
+
+.upper-hitbox {
+    height: 0px;
+    transition: height 0.2s;
+}
+
+.active-button-upper {
+    width: 400px;
+    height: 56px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    background-color: #52a535;
+  
+    border-color: rgb(30, 30, 31);
+    border-style: solid;
+    border-width: 3px 3px 0px 3px;
+  
+    box-shadow: inset 0px 0px 0px 3px #64b14a;
+    /*box-shadow:
+      inset 0 4px #6bc349,
+      inset 0 -4px #2a631c,
+      0 4px rgba(0, 0, 0, .25);*/
+  
+    transition: 0.2s
+  }
+  
+  /*
+  .active-button-upper:hover {
+    border-color: rgb(196, 196, 196);
+    border-style: solid;
+    border-width: 3px 3px 0px 3px;
+  
+    cursor: move;
+  }
+  */
+  
+  .active-button-upper p {
+    font-family: "Minecraft Five v2";
+    font-size: 22px;
+  
+    text-align: center;
+    text-shadow: 0px 2px black;
+  
+    color: white;
+  }
+  
+  .active-button-height {
+    width: 400px;
+    height: 14px;
+  
+    background-color: #1d4d13;
+  
+    border-color: rgb(30, 30, 31);
+    border-style: solid;
+    border-width: 0px 3px 3px 3px;
+  
+    transition: 0.2s
+  }
+  
+  /*
+  .active-button-container:hover .upper-hitbox, 
+  .active-button-container.hover .upper-hitbox {
+    height: 14px;
+
+    transition: 0.2s
+  }
+  
+
+  .active-button-container:hover .active-button-height, 
+  .active-button-container.hover .active-button-height {
+    height: 0px;
+  
+    border-color: rgb(196, 196, 196);
+    border-style: solid;
+    border-width: 0px 3px 3px 3px;
+  
+    transition: 0.2s
+  }
+  
+  .active-button-container:hover .active-button-upper, 
+  .active-button-container.hover .active-button-upper {
+    border-color: rgb(196, 196, 196);
+    border-style: solid;
+    border-width: 3px 3px 0px 3px;
+
+
+    transition: 0.2s
+  }
+
+  .active-button-container:hover {
+
+  }
+  */
+  
+  /*.parent:hover .child, .parent.hover .child { display: block; }*/

@@ -6,6 +6,6 @@ import Button from '../components/Button.vue'
 <template>
   <main>
     <!--TheWelcome /-->
-    <Button />
+    <Button :locked="false"/>
   </main>
 </template>

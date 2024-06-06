@@ -1,0 +1,76 @@
+@import './shared.css';
+
+
+.locked-button-upper {
+    width: 400px;
+    height: 56px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    background-color: #494b48;
+  
+    border-color: rgb(30, 30, 31);
+    border-style: solid;
+    border-width: 3px 3px 0px 3px;
+  
+    box-shadow: inset 0px 0px 0px 3px #63ae49;
+    /*box-shadow:
+      inset 0 4px #6bc349,
+      inset 0 -4px #2a631c,
+      0 4px rgba(0, 0, 0, .25);*/
+  
+    transition: 0.3s
+  }
+  
+  .locked-button-upper:hover {
+    border-color: rgb(124, 124, 129);
+    border-style: solid;
+    border-width: 3px 3px 0px 3px;
+  
+    cursor: move;
+  }
+  
+  .locked-button-upper p {
+    font-family: "Minecraft Five v2";
+    font-size: 22px;
+  
+    text-align: center;
+    text-shadow: 0px 2px black;
+  
+    color: white;
+  }
+  
+  .locked-button-height {
+    width: 400px;
+    height: 14px;
+  
+    background-color: #1d4d13;
+  
+    border-color: rgb(30, 30, 31);
+    border-style: solid;
+    border-width: 0px 3px 3px 3px;
+  
+    transition: 0.3s
+  }
+  
+  .locked-button-container:hover .locked-button-height, 
+  .locked-button-container.hover .locked-button-height {
+    height: 0px;
+  
+    border-color: rgb(124, 124, 129);
+    border-style: solid;
+    border-width: 0px 3px 3px 3px;
+  
+    transition: 0.3s
+  }
+  
+  .locked-button-container:hover .locked-button-upper, 
+  .locked-button-container.hover .locked-button-upper {
+    margin-top: 14px;
+  
+    transition: 0.3s
+  }
+  
+  /*.parent:hover .child, .parent.hover .child { display: block; }*/
