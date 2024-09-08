@@ -1,29 +1,14 @@
 <script setup lang="ts">
 import TheWelcome from '../components/TheWelcome.vue'
 import Button from '../components/Button.vue'
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Badge from '@/components/badge/Badge.vue';
-=======
-import Squares4x4 from '@/components/squares/Squares-4x4.vue';
-import Squares from '@/components/squares/Squares.vue';
->>>>>>> 86830aef6b8c46b327fa0dac1971b0ce8864b665
-=======
-import Squares4x4 from '@/components/squares/Squares-4x4.vue';
-import Squares from '@/components/squares/Squares.vue';
->>>>>>> 86830aef6b8c46b327fa0dac1971b0ce8864b665
 </script>
 
 <template>
   <main>
     <!--TheWelcome /-->
-<<<<<<< HEAD
-<<<<<<< HEAD
     <!--Button :locked="false"/-->
     <Badge text="factions"/>
-=======
-=======
->>>>>>> 86830aef6b8c46b327fa0dac1971b0ce8864b665
     <!--img src="@/assets/svg/squaresvoxy.svg" alt="My Happy SVG"/-->
 
     <div class="test">
@@ -31,7 +16,6 @@ import Squares from '@/components/squares/Squares.vue';
     </div>
 
     <Button :locked="false"/>
->>>>>>> 86830aef6b8c46b327fa0dac1971b0ce8864b665
   </main>
 </template>
 
