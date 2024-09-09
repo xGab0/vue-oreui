@@ -2,12 +2,14 @@
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 import ViewPort from './views/ViewPort.vue'
-import OrdersView from './views/OrdersView.vue';
+import OrdersView from './pages/OrdersView.vue';
+import HomeView from './pages/HomeView.vue';
+import ExampleView from './views/example/ExampleView.vue';
 </script>
 
 <template>
   <!--RouterView /-->
-  <ViewPort/>
+  <ExampleView/>
 </template>
 
 <style scoped lang="scss">

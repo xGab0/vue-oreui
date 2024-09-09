@@ -1,39 +1,68 @@
 <script setup lang="ts">
-import Badge from '@/components/badge/Badge.vue';
-import Navbar from '@/components/Navbar.vue';
-import Separator from '@/components/separator/Separator.vue';
-import ServerCard from '@/components/ServerCard.vue';
-import ServerList from './ServerList.vue';
+import ExampleCollapsableScrollView from './example/ExampleCollapsableScrollView.vue';
 </script>
 
 <template>
   <div class="viewport">
-    <Navbar/>
+    <ExampleCollapsableScrollView/>
 
-    <!--div class="wallpaper levitateDown">
-      <!--img src="@/assets/images/wallpaper_minecraft_bedrock_edition.png"-->
-      <!--div class="separator-container">
-        <Separator/>
-      </div>
-    </div-->
+    <!--Navbar/-->
 
-    <!--div class="cube">
-    </div-->
+    <!--Separator/-->
 
-    <ServerList/>
+    <!--p class="wow">What is this place?</p>
+    <span class="wew">
+      minecraft 2 confirmed
+      <p/>
+      the film trailer is bad af
+      <p/>
+      lorem ipsum sit dolor
+    </span>
+
+    <CreeperFace/-->
   </div> 
 </template>
 
 <style scoped lang="scss">
+@font-face {
+  font-family: 'minecraft-five-v2-regular';
+  src: url('@/assets/fonts/minecraft-five-v2-regular.otf');
+}
+
+@font-face {
+  font-family: 'minecraft-ten-v2-regular';
+  src: url('@/assets/fonts/minecraft-ten-v2-regular.otf');
+}
+
+@font-face {
+  font-family: 'minecraft-seven';
+  src: url('@/assets/fonts/minecraft-seven.ttf');
+}
+
+.wow {
+  font-size: 26px;
+  font-family: 'minecraft-ten-v2-regular';
+
+  background-color: #a2a2a2;
+  background-clip: text;
+
+  color: transparent;
+  text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
+}
+.wew {
+  font-family: 'minecraft-seven';
+  color: #3b3b3b;
+}
+
 .viewport {
   width: 100%;
   height: 100%;
 
-  padding-top: 2%;
-  padding-left: 6%;
-  padding-right: 6%;
+  //padding-top: 2%;
+  //padding-left: 6%;
+  //padding-right: 6%;
 
-  display: flex;
+  //display: flex;
   flex-direction: column;
   //justify-content: center;
   align-items: center;

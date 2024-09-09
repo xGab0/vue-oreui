@@ -2,6 +2,7 @@
 import TheWelcome from '../components/TheWelcome.vue'
 import Button from '../components/Button.vue'
 import Badge from '@/components/badge/Badge.vue';
+import Squares from '@/components/squares/Squares.vue';
 </script>
 
 <template>
