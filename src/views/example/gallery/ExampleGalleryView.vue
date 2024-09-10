@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import TransparentButton from '@/components/button/TransparentButton.vue';
 import CarouselView from '@/views/CarouselView.vue';
 import GalleryView from '@/views/gallery/GalleryView.vue';
 
@@ -6,6 +7,10 @@ import GalleryView from '@/views/gallery/GalleryView.vue';
 
 <template>
   <GalleryView/>
+
+  <TransparentButton>
+    <p>ciao</p>
+  </TransparentButton>
 </template>
 
 <style scoped lang="scss">
@@ -22,5 +27,9 @@ import GalleryView from '@/views/gallery/GalleryView.vue';
 @font-face {
   font-family: 'minecraft-seven';
   src: url('@/assets/fonts/minecraft-seven.ttf');
+}
+
+p {
+  font-family: 'minecraft-seven';
 }
 </style>

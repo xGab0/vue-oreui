@@ -8,13 +8,23 @@
     </div>
   </div-->
 
-  <div class="masked-div">
-    Contenuto del div
+  <!--div class="masked-div-container">
+    <div class="masked-div">
+      Contenuto del div
+    </div>
   </div>
 
   <div class="mask" id="mask"></div>
 
-  <div id="maschera"></div>
+  <svg viewBox="0 0 200 200" preserveAspectRatio="none" id="cock">
+    <polygon points="20,20 20,180 180,100 " fill="black"/>
+  </svg-->
+
+  <div id="box">
+    <div id="innerbox"></div>
+
+    <slot/>
+  </div>
 </template>
 
 <style scoped lang="scss">
@@ -52,18 +62,75 @@
 }
 
 #maskera {
-  background: radial-gradient(circle, black 50%, transparent 51%);
+  background:
+    radial-gradient(circle, black 50%, transparent 51%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
 }
-.masked-div {
+.masked-div-container {
   width: 300px;
   height: 300px;
+
+  padding: 4px;
+  border: solid green 2px;
+}
+.masked-div {
+  width: 100%;
+  height: 100%;
 
   text-align: center;
   vertical-align: middle;
 
-  background: linear-gradient(to right, red, purple);
-  mask-image: url(#maschera);
+  background-color: lightcoral;
+  //background: linear-gradient(to right, red, purple);
+
+  mask-image: radial-gradient(black 50%, transparent 51%);
+  mask-size: 100% 100%;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-origin: fill-box;
+  mask-composite: exclude;
+
   //mask-image: radial-gradient(circle, black 50%, transparent 51%);
   //-webkit-mask-image: radial-gradient(circle, black 50%, transparent 51%); /* Supporto per Webkit */
+}
+
+#box {
+  margin: auto;
+  position: relative;
+
+  width: fit-content;
+
+  padding: 6px;
+
+  background-color: transparent;
+}
+
+#innerbox {
+  position: absolute;
+  inset: 0;
+
+  mask:
+     url('data:image/svg+xml;utf8,<svg style="padding: 2px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><rect width="100" height="100"/></svg>') 0/100% 100%,
+     linear-gradient(#fff, #fff);
+
+  mask-composite: exclude;
+
+  //background: linear-gradient(to right, red, purple);
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 </style>

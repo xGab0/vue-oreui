@@ -8,7 +8,6 @@ import TransparentButton from '@/components/button/TransparentButton.vue';
 <template>
   <div class="viewport">
     <ExampleGalleryView/>
-    <TransparentButton/> 
   </div>
 </template>
 
