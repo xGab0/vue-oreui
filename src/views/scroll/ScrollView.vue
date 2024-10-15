@@ -38,7 +38,8 @@ onMounted(() => {
 </script>
 
 <template>
-  <div v-scroll="onScroll" ref="element" class="scroll-list" :style="gradientStyle">
+  <!--div v-scroll="onScroll" ref="element" class="scroll-list" :style="gradientStyle"-->
+  <div ref="element" class="scroll-list">
     <slot />
   </div>
 </template>
@@ -46,7 +47,7 @@ onMounted(() => {
 <style scoped lang="scss">
 .scroll-list {
   overflow-y: scroll;
-  height: 200px;
+  height: 300px;
 
   padding-right: 50px;
 
@@ -103,7 +104,7 @@ onMounted(() => {
   //--top-mask-size: 48px !important;
 
   //background-color: red;
-  mask-image: linear-gradient(to bottom, transparent 0, black 30px, black calc(100% - 30px), transparent 100%);
+  //mask-image: linear-gradient(to bottom, transparent 0, black 30px, black calc(100% - 30px), transparent 100%);
 }
 
 .bottomFade {

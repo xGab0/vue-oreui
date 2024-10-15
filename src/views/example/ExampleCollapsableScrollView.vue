@@ -4,6 +4,7 @@ import ScrollView from '@/views/scroll/ScrollView.vue';
 import CollapsableView from '@/views/collapsable/CollapsableView.vue';
 import { reactive, ref } from 'vue';
 import CollapseIcon from '@/components/icons/CollapseIcon.vue';
+import FadeLayout from '@/layouts/FadeLayout.vue';
 
 const collapsed = ref<boolean>(false);
 
@@ -24,42 +25,52 @@ function switchCollapse() {
       <p>Window title</p>
       <CollapseIcon :style="gradientStyle"/>
     </div>
-    <CollapsableView :collapsed="collapsed">
-      <div class="elements-container">
-        <div class="element">
-          <CreeperFace/>
-          <p>element #1</p>
-        </div>
+    <FadeLayout :top="true" :left="false" :bottom="true" :right="false">
+      <CollapsableView :collapsed="collapsed">
+        <div class="elements-container">
+          <div class="element">
+            <CreeperFace/>
+            <p>element #1</p>
+          </div>
 
-        <div class="element">
-          <CreeperFace/>
-          <p>element #2</p>
-        </div>
+          <div class="element">
+            <CreeperFace/>
+            <p>element #2</p>
+          </div>
 
-        <div class="element">
-          <CreeperFace/>
-          <p>element #3</p>
-        </div>
+          <div class="element">
+            <CreeperFace/>
+            <p>element #3</p>
+          </div>
 
-        <CollapsableView :collapsed="true">
-          <ScrollView>
-            <div v-for="(value, index) in 20" class="element">
-              <CreeperFace/>
-              <p>element #{{ index }}</p>
-            </div>
-          </ScrollView>
-        </CollapsableView>
-        <div class="element">
-          <CreeperFace/>
-          <p>element #4</p>
-        </div>
+          <FadeLayout :top="true" :left="false" :bottom="true" :right="false">
+            <CollapsableView :collapsed="true">
+              <FadeLayout :top="true" :left="false" :bottom="true" :right="false">
+                <ScrollView>
+                  <div v-for="(value, index) in 20" class="element">
+                    <CreeperFace/>
+                    <p>element #{{ index }}</p>
+                  </div>
+                </ScrollView>
+              </FadeLayout>
+            </CollapsableView>
+          </FadeLayout>
+          <div class="element">
+            <CreeperFace/>
+            <p>element #4</p>
+          </div>
 
-        <div class="element">
-          <CreeperFace/>
-          <p>element #5</p>
+          <div class="element">
+            <CreeperFace/>
+            <p>element #5</p>
+          </div>
         </div>
-      </div>
-    </CollapsableView>
+      </CollapsableView>
+    </FadeLayout>
+    <div class="window-bar" @click="switchCollapse()">
+      <p>Window title</p>
+      <CollapseIcon :style="gradientStyle"/>
+    </div>
   </div>
 </template>
 
@@ -79,6 +90,13 @@ function switchCollapse() {
   src: url('@/assets/fonts/minecraft-seven.ttf');
 }
 
+.container {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
 .dropdown-list {
   transition: 1.5s ease-in-out;
 }
