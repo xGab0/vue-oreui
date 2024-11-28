@@ -8,6 +8,8 @@ import RotateLayout from '@/layouts/RotateLayout.vue';
 import AdvancedBorderLayout from '@/layouts/AdvancedBorderLayout.vue';
 import ExampleScrollView from './scroll/ExampleScrollView.vue';
 import BloomLayout from '@/layouts/BloomLayout.vue';
+import StackLayout from '@/layouts/StackLayout.vue';
+import ExampleStackLayout from './ExampleStackLayout.vue';
 </script>
 
 <template>

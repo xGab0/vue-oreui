@@ -49,13 +49,13 @@ console.log(fadeStyle)
 </script>
 
 <template>
-  <div class="fade-composite" :style="computedStyle">
+  <div class="effect-fade" :style="computedStyle">
     <slot />
   </div>
 </template>
 
 <style scoped lang="scss">
-.fade-composite {
+.effect-fade {
   mask-composite: intersect;
 }
 

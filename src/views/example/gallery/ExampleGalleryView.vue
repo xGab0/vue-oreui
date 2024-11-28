@@ -7,10 +7,6 @@ import GalleryView from '@/views/gallery/GalleryView.vue';
 
 <template>
   <GalleryView/>
-
-  <TransparentButton>
-    <p>ciao</p>
-  </TransparentButton>
 </template>
 
 <style scoped lang="scss">

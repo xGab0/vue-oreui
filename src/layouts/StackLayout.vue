@@ -1,7 +1,4 @@
 <script setup lang="ts">
-const props = defineProps<{
-  collapsed: boolean
-}>()
 </script>
 
 <template>
@@ -12,6 +9,11 @@ const props = defineProps<{
 
 <style scoped lang="scss">
 .stack-layout {
-  
+  display: grid;
+  grid-template-areas: "stack";
+
+  & > * {
+    grid-area: stack;
+  }
 }
 </style>
